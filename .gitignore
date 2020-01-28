@@ -1,6 +1,7 @@
 # Temporary files
 .*.swp
 .*.swo
+.dupecache
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -18,6 +18,7 @@ The following exclude rules are available. These can be used more than once:
 
 By default, the following exclude rule is provided:
   --x-dir .git          Exclude objects within the ".git" directory.
+  --x-dir .svn          Exclude objects within the ".svn" directory.
 This can be overruled via the --no-default-exclude argument.
 
 There is no special logic for hardlinks. Symbolic links are completely ignored.
@@ -357,7 +358,7 @@ Default excludes are: "--x-dir .git", "--x-dir .svn" """)
   ap.add_argument("--x-path-glob", metavar="GLOB", action="append", help="exclude objects with paths matching GLOB")
   ap.add_argument("--x-file", metavar="FILE", action="append", help="exclude files named FILE")
   ap.add_argument("--x-file-glob", metavar="GLOB", action="append", help="exclude files matching GLOB")
-  ap.add_argument("--no-default-exclude", action="store_true", help="do not add default excludes (see --help for a list)")
+  ap.add_argument("--no-default-exclude", action="store_true", help="do not add default excludes")
   args = ap.parse_args()
   opts = {
     "paths": [],
