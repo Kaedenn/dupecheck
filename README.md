@@ -15,7 +15,7 @@ See `--help` for a detailed explanation of each command-line argument.
 
 This script provides various arguments for defining exclude rules. Each of these arguments can be used more than once. These arguments are as follows:
 
-| ----- | ----- |
+| -------- | -------- |
 | `--x-dir NAME` | Exclude objects whose absolute path contains any directory named `NAME` |
 | `--x-dir-glob GLOB` | Exclude objects whose absolute path contains any directory matching `GLOB` |
 | `--x-path-glob GLOB` | Exclude objects whose absolute paths match `GLOB` |
@@ -24,7 +24,7 @@ This script provides various arguments for defining exclude rules. Each of these
 
 By default (that is, unless `--no-default-exclude` is specified), the following exclude rules are assumed:
 
-| ----- | ----- |
+| -------- | -------- |
 | `--x-dir .git` | Exclude all objects within a `.git` directory, including descendants |
 | `--x-dir .svn` | Exclude all objects within a `.svn` directory, including descendants |
 
