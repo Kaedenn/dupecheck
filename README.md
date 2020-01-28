@@ -25,6 +25,7 @@ This script provides various arguments for defining exclude rules. Each of these
 
 By default (that is, unless `--no-default-exclude` is specified), the following exclude rules are assumed:
 
+| Argument | Description |
 | -------- | -------- |
 | `--x-dir .git` | Exclude all objects within a `.git` directory, including descendants |
 | `--x-dir .svn` | Exclude all objects within a `.svn` directory, including descendants |
