@@ -15,16 +15,16 @@ See `--help` for a detailed explanation of each command-line argument.
 
 This script provides various arguments for defining exclude rules. Each of these arguments can be used more than once. These arguments are as follows.
 
-  . `--x-dir NAME`	Exclude objects whose absolute path contains any directory named `NAME`
-  . `--x-dir-glob GLOB`	Exclude objects whose absolute path contains any directory matching `GLOB`
-  . `--x-path-glob GLOB`	Exclude objects whose absolute paths match `GLOB`
-  . `--x-file NAME`	Exclude files named `NAME`
-  . `--x-file-glob GLOB`	Exclude files with names matching `GLOB`
+`--x-dir NAME`: Exclude objects whose absolute path contains any directory named `NAME`
+`--x-dir-glob GLOB`: Exclude objects whose absolute path contains any directory matching `GLOB`
+`--x-path-glob GLOB`: Exclude objects whose absolute paths match `GLOB`
+`--x-file NAME`: Exclude files named `NAME`
+`--x-file-glob GLOB`: Exclude files with names matching `GLOB`
 
 By default (that is, unless `--no-default-exclude` is specified), the following exclude rules are assumed:
 
-  . `--x-dir .git`	Exclude all objects within a `.git` directory, including descendants
-  . `--x-dir .svn`	Exclude all objects within a `.svn` directory, including descendants
+`--x-dir .git`: Exclude all objects within a `.git` directory, including descendants
+`--x-dir .svn`: Exclude all objects within a `.svn` directory, including descendants
 
 ## Output parsing
 
@@ -38,6 +38,6 @@ Therefore, a simple set of shell commands are sufficient to parse the output:
 
 ```
 dupecheck.py <paths> \
-   	sed -e 's/^Dupe: //g' -e 's/"//g' \
-   	awk -F' -> ' '{ print "1="$1"\n2="$2"\n"; }'
+   | sed -e 's/^Dupe: //g' -e 's/"//g' \
+   | awk -F' -> ' '{ print "1="$1"\n2="$2"\n"; }'
 ```
